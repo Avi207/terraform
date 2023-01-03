@@ -68,6 +68,6 @@ variable "bastion_service_address_prefixes" {
 }
 
 variable "source_address_range" {
-     type = list(string)
-  default = ["10.0.101.0/32"]
+     type = string
+  default = "10.0.101.0/32"
 }
