@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "bastion_linuxvm_nic" {
   resource_group_name = azurerm_resource_group.rg.name
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.websubnet.id 
+    subnet_id                     = azurerm_subnet.bastionsubnet.id 
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.bastion_host_public_ip.id
   }
